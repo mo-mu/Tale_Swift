@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A8AC5133EB0221D232F4DA0 /* Pods_TailSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671147D8ABAA8DD3FE176874 /* Pods_TailSwift.framework */; };
 		A97BD8981EC168D8003C561A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97BD8971EC168D8003C561A /* AppDelegate.swift */; };
 		A97BD89A1EC168D8003C561A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97BD8991EC168D8003C561A /* ViewController.swift */; };
 		A97BD89D1EC168D8003C561A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A97BD89B1EC168D8003C561A /* Main.storyboard */; };
@@ -37,7 +38,34 @@
 		A97BD8DA1EC1EF28003C561A /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97BD8D91EC1EF28003C561A /* WriteViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A98DEBB71EC63CB4003EE868 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98DEBB11EC63CB4003EE868 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 92C95546BC3681D5E6927D31D39BAC15;
+			remoteInfo = GoogleToolboxForMac;
+		};
+		A98DEBB91EC63CB4003EE868 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98DEBB11EC63CB4003EE868 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 97EAC16F4CE4C50042ECC9323B5D2DFF;
+			remoteInfo = GTMSessionFetcher;
+		};
+		A98DEBBB1EC63CB4003EE868 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98DEBB11EC63CB4003EE868 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 332B319622A75C2192443886CA846812;
+			remoteInfo = "Pods-TailSwift";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		09E5B54242F8B42EE5C9CB6A /* Pods-TailSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TailSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-TailSwift/Pods-TailSwift.release.xcconfig"; sourceTree = "<group>"; };
+		671147D8ABAA8DD3FE176874 /* Pods_TailSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TailSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E99507C262F8DDF1D663D3 /* Pods-TailSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TailSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TailSwift/Pods-TailSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		A97BD8941EC168D8003C561A /* TailSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TailSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97BD8971EC168D8003C561A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A97BD8991EC168D8003C561A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +96,7 @@
 		A97BD8C11EC16AF7003C561A /* tail_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tail_img.png; path = Assets.xcassets/tail_img.png; sourceTree = "<group>"; };
 		A97BD8C21EC16AF7003C561A /* write_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = write_btn.png; path = Assets.xcassets/write_btn.png; sourceTree = "<group>"; };
 		A97BD8D91EC1EF28003C561A /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		A98DEBB11EC63CB4003EE868 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,17 +104,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A8AC5133EB0221D232F4DA0 /* Pods_TailSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		232F0F86D91A8CBA52CF4122 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4E99507C262F8DDF1D663D3 /* Pods-TailSwift.debug.xcconfig */,
+				09E5B54242F8B42EE5C9CB6A /* Pods-TailSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A97BD88B1EC168D8003C561A = {
 			isa = PBXGroup;
 			children = (
 				A97BD8961EC168D8003C561A /* TailSwift */,
 				A97BD8951EC168D8003C561A /* Products */,
+				A98DEBB11EC63CB4003EE868 /* Pods.xcodeproj */,
+				232F0F86D91A8CBA52CF4122 /* Pods */,
+				CAF6451DD76072B5642EDF7A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +191,24 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		A98DEBB21EC63CB4003EE868 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A98DEBB81EC63CB4003EE868 /* GoogleToolboxForMac.framework */,
+				A98DEBBA1EC63CB4003EE868 /* GTMSessionFetcher.framework */,
+				A98DEBBC1EC63CB4003EE868 /* Pods_TailSwift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAF6451DD76072B5642EDF7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				671147D8ABAA8DD3FE176874 /* Pods_TailSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A97BD8A61EC168D8003C561A /* Build configuration list for PBXNativeTarget "TailSwift" */;
 			buildPhases = (
+				091956C5C085F149EC26A459 /* [CP] Check Pods Manifest.lock */,
 				A97BD8901EC168D8003C561A /* Sources */,
 				A97BD8911EC168D8003C561A /* Frameworks */,
 				A97BD8921EC168D8003C561A /* Resources */,
+				9C102D0F0163B90C4D13033B /* [CP] Embed Pods Frameworks */,
+				95ABCA1D3ACE9BCA243334EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,12 +259,42 @@
 			mainGroup = A97BD88B1EC168D8003C561A;
 			productRefGroup = A97BD8951EC168D8003C561A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A98DEBB21EC63CB4003EE868 /* Products */;
+					ProjectRef = A98DEBB11EC63CB4003EE868 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A97BD8931EC168D8003C561A /* TailSwift */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A98DEBB81EC63CB4003EE868 /* GoogleToolboxForMac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GoogleToolboxForMac.framework;
+			remoteRef = A98DEBB71EC63CB4003EE868 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A98DEBBA1EC63CB4003EE868 /* GTMSessionFetcher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GTMSessionFetcher.framework;
+			remoteRef = A98DEBB91EC63CB4003EE868 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A98DEBBC1EC63CB4003EE868 /* Pods_TailSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_TailSwift.framework;
+			remoteRef = A98DEBBB1EC63CB4003EE868 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A97BD8921EC168D8003C561A /* Resources */ = {
@@ -237,6 +330,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		091956C5C085F149EC26A459 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		95ABCA1D3ACE9BCA243334EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TailSwift/Pods-TailSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C102D0F0163B90C4D13033B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TailSwift/Pods-TailSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A97BD8901EC168D8003C561A /* Sources */ = {
@@ -368,6 +509,7 @@
 		};
 		A97BD8A71EC168D8003C561A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4E99507C262F8DDF1D663D3 /* Pods-TailSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TailSwift/Info.plist;
@@ -380,6 +522,7 @@
 		};
 		A97BD8A81EC168D8003C561A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09E5B54242F8B42EE5C9CB6A /* Pods-TailSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TailSwift/Info.plist;
@@ -409,6 +552,7 @@
 				A97BD8A81EC168D8003C561A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
