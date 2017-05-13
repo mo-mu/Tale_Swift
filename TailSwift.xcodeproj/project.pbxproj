@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1A8AC5133EB0221D232F4DA0 /* Pods_TailSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671147D8ABAA8DD3FE176874 /* Pods_TailSwift.framework */; };
+		A921C4251EC7443E003A398B /* Home-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A921C4221EC7443E003A398B /* Home-50.png */; };
+		A921C4261EC7443E003A398B /* Literature-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A921C4231EC7443E003A398B /* Literature-50.png */; };
+		A921C4271EC7443E003A398B /* Settings-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A921C4241EC7443E003A398B /* Settings-50.png */; };
+		A921C4291EC74453003A398B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A921C4281EC74453003A398B /* GoogleService-Info.plist */; };
 		A97BD8981EC168D8003C561A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97BD8971EC168D8003C561A /* AppDelegate.swift */; };
 		A97BD89A1EC168D8003C561A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97BD8991EC168D8003C561A /* ViewController.swift */; };
 		A97BD89D1EC168D8003C561A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A97BD89B1EC168D8003C561A /* Main.storyboard */; };
@@ -66,6 +70,10 @@
 		09E5B54242F8B42EE5C9CB6A /* Pods-TailSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TailSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-TailSwift/Pods-TailSwift.release.xcconfig"; sourceTree = "<group>"; };
 		671147D8ABAA8DD3FE176874 /* Pods_TailSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TailSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E99507C262F8DDF1D663D3 /* Pods-TailSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TailSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TailSwift/Pods-TailSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		A921C4221EC7443E003A398B /* Home-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Home-50.png"; path = "Assets.xcassets/Home-50.png"; sourceTree = "<group>"; };
+		A921C4231EC7443E003A398B /* Literature-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Literature-50.png"; path = "Assets.xcassets/Literature-50.png"; sourceTree = "<group>"; };
+		A921C4241EC7443E003A398B /* Settings-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Settings-50.png"; path = "Assets.xcassets/Settings-50.png"; sourceTree = "<group>"; };
+		A921C4281EC74453003A398B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A97BD8941EC168D8003C561A /* TailSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TailSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97BD8971EC168D8003C561A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A97BD8991EC168D8003C561A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +150,7 @@
 		A97BD8961EC168D8003C561A /* TailSwift */ = {
 			isa = PBXGroup;
 			children = (
+				A921C4281EC74453003A398B /* GoogleService-Info.plist */,
 				A97BD8D81EC1EEFC003C561A /* Controller */,
 				A97BD8AB1EC16A4D003C561A /* img */,
 				A97BD8971EC168D8003C561A /* AppDelegate.swift */,
@@ -156,6 +165,9 @@
 		A97BD8AB1EC16A4D003C561A /* img */ = {
 			isa = PBXGroup;
 			children = (
+				A921C4221EC7443E003A398B /* Home-50.png */,
+				A921C4231EC7443E003A398B /* Literature-50.png */,
+				A921C4241EC7443E003A398B /* Settings-50.png */,
 				A97BD8AE1EC16AF7003C561A /* back_btn.png */,
 				A97BD8AF1EC16AF7003C561A /* big_fox_img.png */,
 				A97BD8B01EC16AF7003C561A /* check_btn.png */,
@@ -305,6 +317,7 @@
 				A97BD8C91EC16AF7003C561A /* fox_small_profile.png in Resources */,
 				A97BD8C51EC16AF7003C561A /* check_btn.png in Resources */,
 				A97BD8D11EC16AF7003C561A /* speech_bubble_img2.9.png in Resources */,
+				A921C4291EC74453003A398B /* GoogleService-Info.plist in Resources */,
 				A97BD8CB1EC16AF7003C561A /* menu_btn.png in Resources */,
 				A97BD8D61EC16AF7003C561A /* tail_img.png in Resources */,
 				A97BD8C61EC16AF7003C561A /* cryingfox_img.png in Resources */,
@@ -320,8 +333,11 @@
 				A97BD8CA1EC16AF7003C561A /* main_bg_img.png in Resources */,
 				A97BD8C41EC16AF7003C561A /* big_fox_img.png in Resources */,
 				A97BD8CC1EC16AF7003C561A /* modify_btn.png in Resources */,
+				A921C4251EC7443E003A398B /* Home-50.png in Resources */,
 				A97BD8CD1EC16AF7003C561A /* more_img.9.png in Resources */,
+				A921C4271EC7443E003A398B /* Settings-50.png in Resources */,
 				A97BD8C31EC16AF7003C561A /* back_btn.png in Resources */,
+				A921C4261EC7443E003A398B /* Literature-50.png in Resources */,
 				A97BD89D1EC168D8003C561A /* Main.storyboard in Resources */,
 				A97BD8AD1EC16AD6003C561A /* back_btn.png in Resources */,
 				A97BD8CF1EC16AF7003C561A /* speech_bubble_edit.9.png in Resources */,

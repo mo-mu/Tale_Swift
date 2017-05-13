@@ -16,11 +16,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController!.navigationBar.shadowImage = UIImage()
-        self.navigationController!.navigationBar.isTranslucent = true
         
+        let tabBar = UITabBar.appearance()
+        tabBar.barTintColor = UIColor.clear
+        tabBar.backgroundImage = UIImage()
+        tabBar.shadowImage = UIImage()
+        
+        
+        // Do any additional setup after loading the view, typically from a nib.
         let gesturetxtChange = UITapGestureRecognizer(target: self, action: #selector(self.changeQst(_:)))
         
         self.txtChange.addGestureRecognizer(gesturetxtChange)
