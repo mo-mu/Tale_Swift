@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>198603809314-cu58mrq1iimohfgqilgcebf12r0ee5su.apps.googleusercontent.com</string>
+	<string>995377513212-eoqo3f86m7t20db6k357ic0r7vd80eo1.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.198603809314-cu58mrq1iimohfgqilgcebf12r0ee5su</string>
+	<string>com.googleusercontent.apps.995377513212-eoqo3f86m7t20db6k357ic0r7vd80eo1</string>
 	<key>API_KEY</key>
-	<string>AIzaSyC_MSAL5wC78wyeoXeJByCrfL2sWVHW7oM</string>
+	<string>AIzaSyBWbi1vTJ-tzcpf1DTRLhGWe1u9amiGBHw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>198603809314</string>
+	<string>995377513212</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.tdl.ToDoListMan</string>
+	<string>com.momu.TailSwift</string>
 	<key>PROJECT_ID</key>
-	<string>todolist-983d8</string>
+	<string>tale-97db4</string>
 	<key>STORAGE_BUCKET</key>
-	<string>todolist-983d8.appspot.com</string>
+	<string>tale-97db4.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:198603809314:ios:e39bcee0c5855cae</string>
+	<string>1:995377513212:ios:0f5365241fe5ead6</string>
 	<key>DATABASE_URL</key>
-	<string>https://todolist-983d8.firebaseio.com</string>
+	<string>https://tale-97db4.firebaseio.com</string>
 </dict>
 </plist>
