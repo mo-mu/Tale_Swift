@@ -10,9 +10,18 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    var question : String!
+    var answer : String!
+    var created_at : String!
+    var aId : Int!
+    var qId : Int!
+    
+    var a : answer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("hi!!",a.question)
+        print("hi!!",question)
         // Do any additional setup after loading the view.
     }
 

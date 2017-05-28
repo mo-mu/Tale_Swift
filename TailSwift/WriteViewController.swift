@@ -53,7 +53,7 @@ class WriteViewController: UIViewController {
  
         })
  
-        //dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     @IBAction func btnBackClicked(_ sender: Any) {
         dismiss(animated: true, completion: nil)

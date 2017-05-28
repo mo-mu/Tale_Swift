@@ -7,33 +7,61 @@
 //
 
 import UIKit
+import Firebase
 
 class PreviewViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var viewNothing: UIView!
     
-    var questions : [String]  = ["ㅇㅇ","ㅇㅇ"]
+    var answers : [answer] = []
+    
+    var curAnswer : answer!
+    override func viewWillAppear(_ animated: Bool) {
+        
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var database = FIRDatabase.database()
+        var ref  = database.reference()
+        
+        self.view.viewWithTag(4)?.isHidden = false
+        self.view.viewWithTag(1)?.isHidden = false
+        
+        
+        ref = ref.child("Answer").child((FIRAuth.auth()?.currentUser?.uid)!)
+        var handle : UInt = 0
+        handle = ref.observe(FIRDataEventType.value, with: { (dataSnapshot) in
+            ref.removeObserver(withHandle: handle)
+            if dataSnapshot.childrenCount > 0 {
+                
+                self.tableView.dataSource = self
+                self.tableView.delegate = self
+                self.view.viewWithTag(1)?.isHidden = false
+                self.view.viewWithTag(4)?.isHidden = true
+                
+                handle = ref.observe(.childAdded, with: { (snapshot) -> Void in
+                    let ans = snapshot.value as! NSDictionary
+                    var item = answer(created_at : ans["created_at"]  as! String, aId : ans["aId"] as! Int, answer : ans["answer"] as! String, qId : ans["qId"] as! Int, question : ans["question"] as! String )
+                    
+                    self.answers.append(item)
+                    
+                    self.tableView.insertRows(at: [IndexPath(row: self.answers.count-1,section: 0)], with : UITableViewRowAnimation.automatic)
+                })
 
-        print("HI", questions.count)
+               
+                
+            } else {
+                
+                self.view.viewWithTag(4)?.isHidden = false
+                self.view.viewWithTag(1)?.isHidden = true
+            }
+        })
         
-        tableView.dataSource = self
-        tableView.delegate = self
         
-        
-        if self.questions.count >= 1 {
-            self.view.viewWithTag(4)?.isHidden = true
-            self.view.viewWithTag(1)?.isHidden = false
-          
-            
-        } else {
-            self.view.viewWithTag(4)?.isHidden = false
-            self.view.viewWithTag(1)?.isHidden = true
-        }
-        
-          self.tableView.insertRows(at: [IndexPath(row: self.questions.count-1,section: 0)], with : UITableViewRowAnimation.automatic)
         // Do any additional setup after loading the view.
         
     }
@@ -54,12 +82,21 @@ class PreviewViewController: UIViewController {
     }
     */
 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segDetail" {
+            let sendtimer=segue.destination as! DetailViewController
+            print(self.curAnswer.question)
+            sendtimer.a = answer(created_at : curAnswer.created_at, aId : curAnswer.aId, answer : curAnswer.answer, qId : curAnswer.qId, question : curAnswer.question )
+            sendtimer.question = self.curAnswer.question
+        }
+    }
 }
 
 extension PreviewViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if questions.count >= 1{
-            return questions.count
+        if answers.count >= 1{
+            return answers.count
         }else{
             return 0}
     }
@@ -72,8 +109,8 @@ extension PreviewViewController:UITableViewDataSource {
             cell.isHidden = true
             
         }
-        cell.txtQuestion.text = questions[indexPath.row]
-        
+        cell.txtQuestion.text = answers[indexPath.row].question
+        cell.txtDate.text = answers[indexPath.row].created_at
         return cell }
 
 }
@@ -82,7 +119,9 @@ extension PreviewViewController:UITableViewDataSource {
 extension PreviewViewController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //CODE TO BE RUN ON CELL TOUCH
-        
+        print("HI!",answers[indexPath.row].question)
+        curAnswer = answer(created_at : answers[indexPath.row].created_at, aId : answers[indexPath.row].aId, answer : answers[indexPath.row].answer, qId : answers[indexPath.row].qId, question : answers[indexPath.row].question )
+        self.performSegue(withIdentifier: "segDetail", sender: self)
         
        
     }

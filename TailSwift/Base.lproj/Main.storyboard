@@ -156,6 +156,7 @@
                     <connections>
                         <outlet property="tableView" destination="x82-PP-R8D" id="RdV-Bo-dGT"/>
                         <outlet property="viewNothing" destination="AYR-5T-2KC" id="b2b-zW-Apt"/>
+                        <segue destination="hTf-bg-x8z" kind="show" identifier="segDetail" id="NtF-Ih-Hqt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yUR-nw-xZY" userLabel="First Responder" sceneMemberID="firstResponder"/>
