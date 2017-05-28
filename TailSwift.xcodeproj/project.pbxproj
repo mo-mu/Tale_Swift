@@ -40,6 +40,7 @@
 		A97BD8D61EC16AF7003C561A /* tail_img.png in Resources */ = {isa = PBXBuildFile; fileRef = A97BD8C11EC16AF7003C561A /* tail_img.png */; };
 		A97BD8D71EC16AF7003C561A /* write_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = A97BD8C21EC16AF7003C561A /* write_btn.png */; };
 		A97BD8DA1EC1EF28003C561A /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97BD8D91EC1EF28003C561A /* WriteViewController.swift */; };
+		A9D474C91EDA7FD90082EA94 /* question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D474C81EDA7FD90082EA94 /* question.swift */; };
 		A9E1C70F1ED947AE008E8E72 /* popup_fox_img.png in Resources */ = {isa = PBXBuildFile; fileRef = A9E1C70D1ED947AE008E8E72 /* popup_fox_img.png */; };
 		A9E1C7101ED947AE008E8E72 /* popup_off_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = A9E1C70E1ED947AE008E8E72 /* popup_off_btn.png */; };
 		A9E1C7151ED95211008E8E72 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1C7141ED95211008E8E72 /* PopUpViewController.swift */; };
@@ -114,6 +115,7 @@
 		A97BD8C21EC16AF7003C561A /* write_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = write_btn.png; path = Assets.xcassets/write_btn.png; sourceTree = "<group>"; };
 		A97BD8D91EC1EF28003C561A /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		A98DEBB11EC63CB4003EE868 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		A9D474C81EDA7FD90082EA94 /* question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = question.swift; sourceTree = "<group>"; };
 		A9E1C70D1ED947AE008E8E72 /* popup_fox_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = popup_fox_img.png; path = Assets.xcassets/popup_fox_img.png; sourceTree = "<group>"; };
 		A9E1C70E1ED947AE008E8E72 /* popup_off_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = popup_off_btn.png; path = Assets.xcassets/popup_off_btn.png; sourceTree = "<group>"; };
 		A9E1C7141ED95211008E8E72 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		A97BD8961EC168D8003C561A /* TailSwift */ = {
 			isa = PBXGroup;
 			children = (
+				A9D474C41EDA7FBD0082EA94 /* database */,
 				A9E1C7221ED9A66D008E8E72 /* Cell */,
 				A921C4281EC74453003A398B /* GoogleService-Info.plist */,
 				A97BD8D81EC1EEFC003C561A /* Controller */,
@@ -238,6 +241,14 @@
 				A98DEBBC1EC63CB4003EE868 /* Pods_TailSwift.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A9D474C41EDA7FBD0082EA94 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				A9D474C81EDA7FD90082EA94 /* question.swift */,
+			);
+			name = database;
 			sourceTree = "<group>";
 		};
 		A9E1C7221ED9A66D008E8E72 /* Cell */ = {
@@ -437,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D474C91EDA7FD90082EA94 /* question.swift in Sources */,
 				A9E1C7241ED9A6A1008E8E72 /* PreviewTableViewCell.swift in Sources */,
 				A9E1C71D1ED98A2A008E8E72 /* LoginViewController.swift in Sources */,
 				A97BD8DA1EC1EF28003C561A /* WriteViewController.swift in Sources */,

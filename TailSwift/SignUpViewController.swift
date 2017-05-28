@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController {
 
@@ -51,7 +52,44 @@ class SignUpViewController: UIViewController {
     }
 
     @IBAction func btnSignUpClicked(_ sender: Any) {
-        
+        if self.editPassword.text! == self.editcheckPw.text! {  //같을 경우
+            FIRAuth.auth()?.createUser(withEmail: editemail.text!, password: editPassword.text!, completion: { (user, error) in
+                if error == nil {   //성공
+                    var database = FIRDatabase.database()
+                    var ref = database.reference()
+                    
+                    ref.child("user").child((FIRAuth.auth()?.currentUser?.uid)!)
+                        .setValue(["email" : FIRAuth.auth()?.currentUser?.email!,
+                                   "nickname" : self.editNickname.text!])
+                    
+                    self.dismiss(animated: true, completion: nil)
+            
+                } else {        //실패
+                    let alertController = UIAlertController(title: "잠깐만", message: "오류가 있어요.", preferredStyle: .alert)
+                    
+                    let saveAction = UIAlertAction(title: "넴", style: .default, handler: {
+                        alert -> Void in
+                        self.dismiss(animated: true, completion: nil)
+                    })
+                
+                alertController.addAction(saveAction)
+                
+                self.present(alertController, animated: true, completion: nil)
+            }
+            }
+        )} else { // 다를 경우
+            let alertController = UIAlertController(title: "잠깐만", message: "비밀번호를 확인하세요.", preferredStyle: .alert)
+            
+            let saveAction = UIAlertAction(title: "넴", style: .default, handler: {
+                alert -> Void in
+                self.dismiss(animated: true, completion: nil)
+                
+            })
+            
+            alertController.addAction(saveAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     /*
     // MARK: - Navigation

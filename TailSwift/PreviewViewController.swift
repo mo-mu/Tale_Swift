@@ -10,18 +10,32 @@ import UIKit
 
 class PreviewViewController: UIViewController {
 
-    @IBOutlet weak var TableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var viewNothing: UIView!
     
-    var questions = ["test1", "test2", "test3"]
+    var questions : [String]  = ["ㅇㅇ","ㅇㅇ"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("HI", questions.count)
         
-        TableView.dataSource = self
-        TableView.delegate = self
+        tableView.dataSource = self
+        tableView.delegate = self
         
+        
+        if self.questions.count >= 1 {
+            self.view.viewWithTag(4)?.isHidden = true
+            self.view.viewWithTag(1)?.isHidden = false
+          
+            
+        } else {
+            self.view.viewWithTag(4)?.isHidden = false
+            self.view.viewWithTag(1)?.isHidden = true
+        }
+        
+          self.tableView.insertRows(at: [IndexPath(row: self.questions.count-1,section: 0)], with : UITableViewRowAnimation.automatic)
         // Do any additional setup after loading the view.
-        self.TableView.insertRows(at: [IndexPath(row: self.questions.count-1,section: 0)], with : UITableViewRowAnimation.automatic)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,25 +56,34 @@ class PreviewViewController: UIViewController {
 
 }
 
-extension PreviewViewController:UITableViewDataSource{
+extension PreviewViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if questions==nil{
-            return 0
+        if questions.count >= 1{
+            return questions.count
         }else{
-            return questions.count }
+            return 0}
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { // 첫 번째 인자로 등록한 identifier, cell은 as 키워드로 앞서 만든 custom cell class화 해준다.
-        let cell = self.TableView.dequeueReusableCell(withIdentifier: "PreviewTableViewCell", for: indexPath) as! PreviewTableViewCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "PreviewTableViewCell", for: indexPath) as! PreviewTableViewCell
+        if indexPath.row >= 0 {
+            cell.isHidden = false
+            
+        } else {
+            cell.isHidden = true
+            
+        }
         cell.txtQuestion.text = questions[indexPath.row]
         
         return cell }
+
 }
 
 
-extension PreviewViewController:UITableViewDelegate{
+extension PreviewViewController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //CODE TO BE RUN ON CELL TOUCH
-        print(indexPath.row)
+        
+        
        
     }
 }
