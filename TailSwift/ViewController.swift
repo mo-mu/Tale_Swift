@@ -29,11 +29,8 @@ class ViewController: UIViewController {
         tabBar.backgroundImage = UIImage()
         tabBar.shadowImage = UIImage()
         
-        
         // Do any additional setup after loading the view, typically from a nib.
         let gesturetxtChange = UITapGestureRecognizer(target: self, action: #selector(self.getQst(_:)))
-        
-        self.txtChange.addGestureRecognizer(gesturetxtChange)
         
         txtChange.isUserInteractionEnabled = true
     }
@@ -43,7 +40,9 @@ class ViewController: UIViewController {
         if FIRAuth.auth()?.currentUser?.uid == nil {
         self.performSegue(withIdentifier: "segPopUp", sender: self)
         }else {
-            self.getQst()
+            //self.getQst()
+            
+            self.checkToday()
             print("It's logined")
         }
  
@@ -67,6 +66,40 @@ class ViewController: UIViewController {
             sendtimer.qId = self.qId
         }
     }
+    func checkToday(){
+        var database = FIRDatabase.database()
+        var ref  = database.reference()
+        var handle : UInt = 0
+        handle = ref.child("Answer").child((FIRAuth.auth()?.currentUser?.uid)!).observe(FIRDataEventType.value, with: { (dataSnapshot) in
+            ref.removeObserver(withHandle: handle)
+            if dataSnapshot == nil {
+                
+                self.getQst()
+            } else {
+                let date = Date()
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd"
+                let result = formatter.string(from: date)
+                print(result)
+                
+                ref.child("Answer").child((FIRAuth.auth()?.currentUser?.uid)!).queryLimited(toLast: 1).observe(FIRDataEventType.childAdded, with: { (snapShot) in
+                    print(String(describing: snapShot))
+                    let ans = snapShot.value as! NSDictionary
+                    var createdAt = ans["created_at"] as! String!
+                    print(createdAt)
+                    if createdAt == result {
+                        self.txtChange.isHidden = true
+                        self.txtQst.text = ans["question"] as! String!
+                    } else {
+                        self.getQst()
+                    }
+                })
+            }
+        })
+        
+    }
+    
+    
     func getQst() {
         var randomeN = arc4random_uniform(101)
         print("hi", String(randomeN))

@@ -42,6 +42,8 @@
 		A97BD8DA1EC1EF28003C561A /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97BD8D91EC1EF28003C561A /* WriteViewController.swift */; };
 		A9D474C91EDA7FD90082EA94 /* question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D474C81EDA7FD90082EA94 /* question.swift */; };
 		A9D474CB1EDAA7F70082EA94 /* answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D474CA1EDAA7F70082EA94 /* answer.swift */; };
+		A9D474D91EDC28E00082EA94 /* speech_bubble_test9.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D474D81EDC28E00082EA94 /* speech_bubble_test9.png */; };
+		A9D474DE1EDC4B240082EA94 /* MotiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D474DD1EDC4B240082EA94 /* MotiViewController.swift */; };
 		A9E1C70F1ED947AE008E8E72 /* popup_fox_img.png in Resources */ = {isa = PBXBuildFile; fileRef = A9E1C70D1ED947AE008E8E72 /* popup_fox_img.png */; };
 		A9E1C7101ED947AE008E8E72 /* popup_off_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = A9E1C70E1ED947AE008E8E72 /* popup_off_btn.png */; };
 		A9E1C7151ED95211008E8E72 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1C7141ED95211008E8E72 /* PopUpViewController.swift */; };
@@ -118,6 +120,8 @@
 		A98DEBB11EC63CB4003EE868 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		A9D474C81EDA7FD90082EA94 /* question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = question.swift; sourceTree = "<group>"; };
 		A9D474CA1EDAA7F70082EA94 /* answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = answer.swift; sourceTree = "<group>"; };
+		A9D474D81EDC28E00082EA94 /* speech_bubble_test9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speech_bubble_test9.png; path = Assets.xcassets/speech_bubble_test9.png; sourceTree = "<group>"; };
+		A9D474DD1EDC4B240082EA94 /* MotiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotiViewController.swift; sourceTree = "<group>"; };
 		A9E1C70D1ED947AE008E8E72 /* popup_fox_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = popup_fox_img.png; path = Assets.xcassets/popup_fox_img.png; sourceTree = "<group>"; };
 		A9E1C70E1ED947AE008E8E72 /* popup_off_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = popup_off_btn.png; path = Assets.xcassets/popup_off_btn.png; sourceTree = "<group>"; };
 		A9E1C7141ED95211008E8E72 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 		A97BD8AB1EC16A4D003C561A /* img */ = {
 			isa = PBXGroup;
 			children = (
+				A9D474D81EDC28E00082EA94 /* speech_bubble_test9.png */,
 				A9E1C70D1ED947AE008E8E72 /* popup_fox_img.png */,
 				A9E1C70E1ED947AE008E8E72 /* popup_off_btn.png */,
 				A921C4221EC7443E003A398B /* Home-50.png */,
@@ -231,6 +236,7 @@
 				A9E1C71E1ED98A5F008E8E72 /* PreviewViewController.swift */,
 				A9E1C7201ED98A6D008E8E72 /* SetUpViewController.swift */,
 				A9E1C7251ED9AFE5008E8E72 /* DetailViewController.swift */,
+				A9D474DD1EDC4B240082EA94 /* MotiViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 				A97BD8C51EC16AF7003C561A /* check_btn.png in Resources */,
 				A97BD8D11EC16AF7003C561A /* speech_bubble_img2.9.png in Resources */,
 				A921C4291EC74453003A398B /* GoogleService-Info.plist in Resources */,
+				A9D474D91EDC28E00082EA94 /* speech_bubble_test9.png in Resources */,
 				A97BD8CB1EC16AF7003C561A /* menu_btn.png in Resources */,
 				A97BD8D61EC16AF7003C561A /* tail_img.png in Resources */,
 				A97BD8C61EC16AF7003C561A /* cryingfox_img.png in Resources */,
@@ -454,6 +461,7 @@
 				A9D474C91EDA7FD90082EA94 /* question.swift in Sources */,
 				A9E1C7241ED9A6A1008E8E72 /* PreviewTableViewCell.swift in Sources */,
 				A9E1C71D1ED98A2A008E8E72 /* LoginViewController.swift in Sources */,
+				A9D474DE1EDC4B240082EA94 /* MotiViewController.swift in Sources */,
 				A9D474CB1EDAA7F70082EA94 /* answer.swift in Sources */,
 				A97BD8DA1EC1EF28003C561A /* WriteViewController.swift in Sources */,
 				A9E1C71F1ED98A5F008E8E72 /* PreviewViewController.swift in Sources */,

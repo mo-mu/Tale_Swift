@@ -1,0 +1,35 @@
+{
+  "images" : [
+    {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 37,
+          "height" : 36
+        },
+        "cap-insets" : {
+          "bottom" : 48,
+          "top" : 57,
+          "right" : 602,
+          "left" : 116
+        }
+      },
+      "idiom" : "universal",
+      "filename" : "speech_bubble_test9.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
