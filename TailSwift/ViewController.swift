@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtChange: UILabel!
     @IBOutlet weak var txtQst: UILabel!
     @IBOutlet weak var btnWrite: UIImageView!
+    @IBOutlet weak var txtAnswer: UILabel!
+    @IBOutlet weak var container: UIView!
+    @IBOutlet weak var img: UIImageView!
     
     var curQst : String!
     var qId : Int!
@@ -28,11 +31,12 @@ class ViewController: UIViewController {
         tabBar.barTintColor = UIColor.clear
         tabBar.backgroundImage = UIImage()
         tabBar.shadowImage = UIImage()
-        
         // Do any additional setup after loading the view, typically from a nib.
         let gesturetxtChange = UITapGestureRecognizer(target: self, action: #selector(self.getQst(_:)))
         
         txtChange.isUserInteractionEnabled = true
+        
+        txtChange.addGestureRecognizer(gesturetxtChange)
     }
     
     //화면이 뜨고난 직후 돌아가는 코드.
@@ -40,8 +44,6 @@ class ViewController: UIViewController {
         if FIRAuth.auth()?.currentUser?.uid == nil {
         self.performSegue(withIdentifier: "segPopUp", sender: self)
         }else {
-            //self.getQst()
-            
             self.checkToday()
             print("It's logined")
         }
@@ -64,6 +66,7 @@ class ViewController: UIViewController {
             let sendtimer=segue.destination as! WriteViewController
             sendtimer.question = self.curQst
             sendtimer.qId = self.qId
+            sendtimer.answer = self.txtAnswer.text
         }
     }
     func checkToday(){
@@ -72,10 +75,14 @@ class ViewController: UIViewController {
         var handle : UInt = 0
         handle = ref.child("Answer").child((FIRAuth.auth()?.currentUser?.uid)!).observe(FIRDataEventType.value, with: { (dataSnapshot) in
             ref.removeObserver(withHandle: handle)
-            if dataSnapshot == nil {
+            if !dataSnapshot.exists() {
+                print("Null")
+                self.txtAnswer.isHidden = true
                 
                 self.getQst()
             } else {
+                print("not Null")
+
                 let date = Date()
                 let formatter = DateFormatter()
                 formatter.dateFormat = "yyyy-MM-dd"
@@ -88,8 +95,19 @@ class ViewController: UIViewController {
                     var createdAt = ans["created_at"] as! String!
                     print(createdAt)
                     if createdAt == result {
+                        
+                        if self.txtAnswer.text == "" {
                         self.txtChange.isHidden = true
                         self.txtQst.text = ans["question"] as! String!
+                      
+                        self.txtAnswer.text = ans["answer"] as! String!
+                        self.curQst =  ans["question"] as! String!
+                        self.qId = ans["qId"] as! Int!
+                        self.txtQst.text = self.curQst
+                        self.txtAnswer.sizeToFit()
+                        
+                        self.container.frame = CGRect(x: 27, y: 166, width: self.img.frame.size.width, height: self.img.frame.size.height + self.txtAnswer.frame.size.height+50)
+                        }
                     } else {
                         self.getQst()
                     }

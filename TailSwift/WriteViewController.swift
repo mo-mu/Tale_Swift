@@ -16,6 +16,8 @@ class WriteViewController: UIViewController {
     
     var question : String!
     var qId : Int!
+    var result : String!
+    var answer : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,13 @@ class WriteViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         txtQuestion.text = question
+        
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        result = formatter.string(from: date)
+        
+        editAnswer.text = self.answer
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +52,7 @@ class WriteViewController: UIViewController {
                 ref.child(String(datasnapshot.childrenCount)).setValue(
                 ["aId":datasnapshot.childrenCount,
                  "answer": self.editAnswer.text,
-                 "created_at":"2017-05-28",
+                 "created_at": self.result,
                  "qId": self.qId,
                  "question": self.question]
                 )

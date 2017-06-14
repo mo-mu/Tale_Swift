@@ -17,13 +17,7 @@ class PreviewViewController: UIViewController {
     var answers : [answer] = []
     
     var curAnswer : answer!
-    override func viewWillAppear(_ animated: Bool) {
-        
-
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
         
         var database = FIRDatabase.database()
         var ref  = database.reference()
@@ -31,6 +25,8 @@ class PreviewViewController: UIViewController {
         self.view.viewWithTag(4)?.isHidden = false
         self.view.viewWithTag(1)?.isHidden = false
         
+        answers.removeAll()
+        tableView.reloadData()
         
         ref = ref.child("Answer").child((FIRAuth.auth()?.currentUser?.uid)!)
         var handle : UInt = 0
@@ -51,16 +47,21 @@ class PreviewViewController: UIViewController {
                     
                     self.tableView.insertRows(at: [IndexPath(row: self.answers.count-1,section: 0)], with : UITableViewRowAnimation.automatic)
                 })
-
-               
+                
+                
                 
             } else {
-                
                 self.view.viewWithTag(4)?.isHidden = false
                 self.view.viewWithTag(1)?.isHidden = true
             }
         })
         
+
+
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         
