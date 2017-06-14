@@ -14,7 +14,7 @@ class MotiViewController: UIViewController {
     var a : answer!
     
     @IBOutlet weak var txtQuestion: UILabel!
-    @IBOutlet weak var editAnswer: UITextField!
+    @IBOutlet weak var editAnswer: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

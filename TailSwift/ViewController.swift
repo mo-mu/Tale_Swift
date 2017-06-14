@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtAnswer: UILabel!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var imgStar: UIImageView!
     
     var curQst : String!
     var qId : Int!

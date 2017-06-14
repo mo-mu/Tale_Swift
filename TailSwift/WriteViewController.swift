@@ -11,8 +11,8 @@ import Firebase
 
 class WriteViewController: UIViewController {
 
-    @IBOutlet weak var editAnswer: UITextField!
-    @IBOutlet weak var txtQuestion: UILabel!
+    @IBOutlet weak var editAnswer: UITextView!
+     @IBOutlet weak var txtQuestion: UILabel!
     
     var question : String!
     var qId : Int!
